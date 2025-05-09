@@ -1,0 +1,24 @@
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<bot>
+  <name>Even/Odd Martingale Bot</name>
+  <market>Volatility 100 (1s)</market>
+  <contract_types>
+    <contract_type>DIGITEVEN</contract_type> <!-- Change to DIGITODD for Odd -->
+  </contract_types>
+  <stake>0.35</stake>
+  <martingale>true</martingale>
+  <martingale_multiplier>2</martingale_multiplier> <!-- Multiplier after loss -->
+  <reset_on_win>true</reset_on_win> <!-- Reset to initial stake after a win -->
+  <duration>1</duration>
+  <timeframe>Ticks</timeframe>
+  <analyze_ticks>50</analyze_ticks> <!-- How many ticks to analyze for decision making -->
+  <risk_management>
+    <max_stake>5</max_stake> <!-- Max stake limit -->
+    <max_loss>10</max_loss> <!-- Maximum loss before stopping -->
+    <max_profit>20</max_profit> <!-- Target profit to stop trading -->
+    <max_consecutive_losses>3</max_consecutive_losses> <!-- Stop after 3 consecutive losses -->
+  </risk_management>
+  <infinity_run>true</infinity_run> <!-- Runs indefinitely until manually stopped -->
+</bot>
+```
